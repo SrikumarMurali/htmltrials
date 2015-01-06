@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html>
+<head>
+<title>
+Employee details!
+</title>
+<style type="text/css">
+body{
+ background-color:#4A96AD;
+font-size:20px;
+font-family: Lucida Console;
+color:green;
+}
+h1 {
+color : red;
+font-weight : bold;
+font-family: Lucida Console;
+text-align:center;
+}
+pak
+{position: absolute;
+top: 150px;
+left:150px;
+}
+pan
+{
+position: absolute;
+top: 200px;
+left:150px;
+}
+gen{
+position: absolute;
+top: 250px;
+left:150px;
+}
+deg{
+position: absolute;
+top: 300px;
+left:150px;
+}
+pos{
+position: absolute;
+top: 350px;
+left:150px;
+}
+email{
+position: absolute;
+top: 450px;
+left:150px;
+}
+addr
+{
+position: absolute;
+top: 400px;
+left:150px;
+}
+su{
+position: absolute;
+top: 500px;
+left:250px;
+}
+</style>
+</head>
+<body>
+<h1>EMPLOYEE DETAILS FORM:</h1><hr/>
+<form>
+<pak>Name : <input type="text" name="Ename" /></pak>
+<pan>Date of birth : <input type="number" min=1 max=31 name="Date" value="between 1 - 31" /> / <select name="month"><option>Jan</option><option>Feb</option><option>Mar</option><option>Apr</option><option>May</option><option>Jun</option><option>Jul</option><option>Aug</option><option>Sep</option><option>Oct</option><option>Nov</option><option>Dec</option></select> / <input type="number" name="year" min=1960 max=2000 value="between 1960 - 2000" /></pan>
+<gen>Sex : <input type="radio" name="Gender" value="Male" />Male / <input type="radio" name="Gender" value="Female" /> Female</gen>
+<deg>Degree: <select name="deg"><option>M.Tech</option><option>B.Tech</option></option></select></deg>
+<pos>Position at the Firm : <select name="pos"><option>Junior Partner</option><option>Senior Partner</option><option>Junior Associate</option><option>Senior Associate</option><option>Paralegal</option></select></pos>
+<addr>Address: <textarea name="address"></textarea></addr>
+<email>Email : <input type="text" name="email" /> </email>
+<su><input type="submit" value="submit!!" /></su>
+</form>
+</body>
+</html>
