@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>
+Calculator!
+</title>
+<style type="text/css">
+h1{
+color:orange;
+font-size:bold;
+text-align:center;
+}
+.display
+{
+background-color:#82CAFA;
+position:relative;
+width:360px;
+height:50px;
+left:36%;
+font-weight:bold;
+font-size:40px;
+color:green;
+}
+.button
+{
+width:70px;
+height:40px;
+position:relative;
+left:36%;
+text-align:center;
+background-color:blue;
+font-weight:bold;
+color:red;
+font-size:200%;
+}
+</style>
+<script type="text/javascript">
+
+function Displayinp(inp, chr)
+{
+if (inp.value=="0")                <!-- if the value entered is just 0 or after clr
+inp.value=chr;
+else
+inp.value+=chr;						<!-- else just concat the value clicked to the string already displayed
+}
+
+function sin(form){
+var x= Math.sin(form.display.value)+"";
+x=x.substring(0,11)+"";
+form.display.value=x;
+}
+
+function cos(form){var x= Math.cos(form.display.value)+"";
+x=x.substring(0,11)+"";
+form.display.value=x;
+}
+
+function tan(form){var x= Math.tan(form.display.value)+"";
+x=x.substring(0,11)+"";
+form.display.value=x;
+}
+
+function ln(form){var x= Math.log(form.display.value)+"";
+x=x.substring(0,11)+"";
+form.display.value=x;
+}
+
+function sq(form){form.display.value = form.display.value*form.display.value;}
+
+function sqrt(form){var x= Math.sqrt(form.display.value)+"";
+x=x.substring(0,11)+"";
+form.display.value=x;
+}
+
+function exp(form){var x= Math.exp(form.display.value)+"";
+x=x.substring(0,11)+"";
+form.display.value=x;
+}
+
+function del(inp) {inp.display.value = inp.display.value.substring(0, inp.display.value.length - 1);
+}
+
+</script>
+</head>
+<body>
+<h1>!SEMI SCIENTIFIC CALCULATOR!</h1>
+<hr />
+<br />
+<form name="Calcbutn">
+<input type="text" readonly name="display" value="0" size=35 maxlength="8" class="display">
+<br />
+<input type="button" value="1" class="button" onClick="Displayinp(Calcbutn.display, '1')">
+<input type="button" value="2" class="button" onClick="Displayinp(Calcbutn.display, '2')">
+<input type="button" value="3" class="button" onClick="Displayinp(Calcbutn.display, '3')">
+<input type="button" value="sin" class="button" onclick="sin(Calcbutn)">
+<input type="button" value="+" class="button" onClick="Displayinp(Calcbutn.display, '+')">
+<br />
+<input type="button" value="4" class="button" onClick="Displayinp(Calcbutn.display, '4')">
+<input type="button" value="5" class="button" onClick="Displayinp(Calcbutn.display, '5')">
+<input type="button" value="6" class="button" onClick="Displayinp(Calcbutn.display, '6')">
+<input type="button" value="cos" class="button" onclick="cos(Calcbutn)">
+<input type="button" value="-" class="button" onClick="Displayinp(Calcbutn.display, '-')">
+<br />
+<input type="button" value="7" class="button" onClick="Displayinp(Calcbutn.display, '7')">
+<input type="button" value="8" class="button" onClick="Displayinp(Calcbutn.display, '8')">
+<input type="button" value="9" class="button" onClick="Displayinp(Calcbutn.display, '9')">
+<input type="button" value="tan" class="button" onclick="tan(Calcbutn)">
+<input type="button" value="*" class="button" onClick="Displayinp(Calcbutn.display, '*')">
+<br />
+<input type="button" value="." class="button" onClick="Displayinp(Calcbutn.display, '.')">
+<input type="button" value="0" class="button" onClick="Displayinp(Calcbutn.display, '0')">
+<input type="button" value="ln" class="button" onclick=" ln(Calcbutn)">
+<input type="button" value="del" class="button" onClick="del(Calcbutn)">
+<input type="button" value="/" class="button" onClick="Displayinp(Calcbutn.display, '/')">
+<br />
+<input type="button" value="sqrt" class="button" onclick="sqrt(Calcbutn)">
+<input type="button" value="sq" class="button" onclick=" sq(Calcbutn)">
+<input type="button" value="clr" class="button" onClick="Calcbutn.display.value=0" >
+<input type="button" value="exp" class="button" onclick="exp(Calcbutn)">
+<input type="button" value="=" class="button" onClick="Calcbutn.display.value=eval(Calcbutn.display.value)">
+<br />
+</form>
+</body>
+</html>
